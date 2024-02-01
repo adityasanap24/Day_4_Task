@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //task A odd number in array using arrow , anonymous, IIFE
+
+      //using arrow function
+
+      // const array= [1,2,3,4,5,6,7,8,9]
+      // const odd = array.filter((num) => num % 2 === 1);
+      // console.log(odd);
+
+      // anonymous function
+
+      // let odd1 = function () {
+      // let odd= array.filter(num => num %2 ==1)
+      // console.log(odd)
+      // }
+      // odd1();
+
+      // IIFE function
+
+      // (function(array){
+      //      for(let i = 0 ; i<array.length ; i++){
+      //                 if(array[i]%2!=0){
+      //                    console.log(array[i])
+      //                 }
+      //            }
+      //      })([1,2,3,4,5,6,7,8,9])
+
+      // task B convert all the string to title caps in a sting array using arrow , anonymous, IIFE
+
+      // IIFE Function
+
+      // (function () {
+      //   arr = ["aditya", "learning", "javascript", "in", "guvi"];
+      //   for (var element in arr)
+      //     console.log(
+      //       arr[element].split("")[0].toUpperCase() + arr[element].slice(1)
+      //     );
+      // })();
+
+      // anonymous function
+
+      // function str () {
+      //     arr = ["aditya", "learning", "javascript", "in", "guvi"];
+      //     for (var element in arr)
+      //       console.log(
+      //         arr[element].split("")[0].toUpperCase() + arr[element].slice(1)
+      //       );
+      //   }
+      //   str();
+
+      // arrow function
+
+      // let arr = ["aditya", "learning", "javascript", "in", "guvi"]
+      // arr.forEach(e => console.log(e.split('')[0].toUpperCase() + e.slice(1)))
+
+      //task c sum of all numbers in an array
+
+      //IIFE FUNCTION
+
+      // ( function () {
+      // arr = [12, 11, 23, 12, 32 ,12 ]
+      //  console.log(arr.reduce((a,b) => a+b, 0))
+      // }());
+
+      // anonymous function
+
+      // function sum () {
+      // arr = [12, 11, 23, 12, 32 ,12 ]
+      //  console.log(arr.reduce((a,b) => a+b, 0))
+      // }
+      // sum();
+
+      // arrow function
+
+      // let arr = [12, 11, 23, 12, 32 ,12]
+      // console.log(arr.reduce((a,b) => a+b, 0))
+
+      // task d Return all the prime numbers in an array
+
+      // IIFE FUNCTION
+
+      // console.log(( function () {
+      // let arr = [1,2,3,4,5,6,7,8,9,10]
+      // let output = []
+      // let isPrime = true;
+      // arr.forEach(number => {
+      // if (number === 1) {
+      //     console.log("1 is neither prime nor composite number.");
+      // }
+      // else if (number > 1) {
+      //     for (let i = 2; i < number; i++) {
+      //         if (number % i == 0) {
+      //             isPrime = false;
+      //             break;
+      //         }
+      //     }
+      //     if (isPrime) {
+      //         output.push(number)
+      //     }
+      // }
+      // else {
+      //     console.log("The number is not a prime number.");
+      // }
+      //  })
+      //   return output
+      //   }()));
+
+      //  anonymous function
+      // numArray= [1,2,3,4,5,6,7,8,9,10]
+      // function (numArray){
+      //             numArray = numArray.filter((number) => {
+      //               for (var i = 2; i <= Math.sqrt(number); i++) {
+      //                 if (number % i === 0) return false;
+      //               }
+      //               return true;
+      //             });
+      //             console.log(numArray);
+      //         }
+
+      //  arrow function
+      // let arr = [1,2,3,4,5,6,7,8,9,10]
+      // let isPrime = num => {
+      // for (let i = 2; i < num; i++) {
+      // if (num % i === 0) return false;
+      // }
+      // return num !== 1;
+      // }
+
+      // task e Return all the palindromes in an array
+
+      // IIFE FUNCTION
+
+      // console.log(
+      //   (function () {
+      //     let arr = ["madam", "sir", "eve", "radar", "test"];
+      //     let output = [];
+      //     arr.forEach((string) => {
+      //       let result;
+      //       let copy = string;
+      //       result = string.split("").reverse().join("").includes(copy);
+      //       if (result) output.push(string);
+      //     });
+      //     return output;
+      //   })()
+      // );
+
+      // anonymous function
+
+      // (function () {
+      //   let arr = ["madam", "sir", "eve", "radar", "test"];
+      //   let output = [];
+      //   arr.forEach((string) => {
+      //     let result;
+      //     let copy = string;
+      //     result = string.split("").reverse().join("").includes(copy);
+      //     if (result) output.push(string);
+      //   });
+      //   return output;
+      // })();
+
+      // arrow function
+
+      // let arr= ['aditya', 'eve', 'radar', 'mam', 'madam']
+      // let isPallindrome = ( string) => string.split('').reverse().join('') == string
+      // let pallindromeArray = arr.filter(isPallindrome);
+      // console.log(pallindromeArray);
+
+      // task f Return median of two sorted arrays of same size
+
+      // IIFE FUNCTION
+
+      // console.log(( function () {
+      // let arr1 = [1, 12, 24, 27]
+      // let arr2 = [-1, 0, 2, 17]
+      // let output = 0
+
+      // output = getMedian(arr1, arr2)
+
+      // return output
+      // }()));
+      // function getMedian(arr1, arr2) {
+      // let sortedArray = [...arr1, ...arr2].sort((a,b) => a-b)
+      // let median = sortedArray[sortedArray.length / 2]
+      // return median
+      // }
+
+      // task g Remove duplicates from an array
+
+      // ( function () {
+      // let arr = [1, 12, 24, 27, 12, 24, 22]
+
+      // console.log(Array.from(new Set(arr)))
+
+      // }())
+
+      //  task h Rotate an array by k times
+
+      //   (function () {
+      //   let arr = [1, 12, 24, 27, 12, 24, 22]
+
+      //   let k = 5
+
+      //   for(let i = -k ; i <= k ; i++) {
+      //       console.log(arrayRotate(arr, i), i);
+      //     }
+
+      //     }());
+
+      //   function arrayRotate(arr, count) {
+      //   count -= arr.length * Math.floor(count / arr.length);
+      //   arr.push.apply(arr, arr.splice(0, count));
+      //   return arr;
+      //  }
+    </script>
+  </body>
+</html>
